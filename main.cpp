@@ -30,7 +30,7 @@ int main(int argc, char* argv[]) {
         SDL_WINDOWPOS_UNDEFINED,
         1536,
         790,
-        SDL_WINDOW_SHOWN
+        SDL_WINDOW_SHOWN | SDL_WINDOW_FULLSCREEN_DESKTOP
     );
 
     if (window == NULL) {
@@ -47,24 +47,23 @@ int main(int argc, char* argv[]) {
 
     SDL_SetRenderDrawColor(renderer, 220, 220, 255, 255);
     SDL_RenderClear(renderer);
-    // SDL_RenderPresent(renderer);
 
     filledRectangleRGBA(renderer, 0, 0, 1536, 40, 20, 110, 180, 170);
 
-    filledRectangleRGBA(renderer, 0, 90, 60, 700, 245, 245, 245, 255);
-    rectangleRGBA(renderer, 0, 91, 60, 789, 160, 160, 160, 240);
+    filledRectangleRGBA(renderer, 0, 90, 60, 771, 245, 245, 245, 255);
+    rectangleRGBA(renderer, 0, 91, 60, 860, 160, 160, 160, 240);
 
-    roundedBoxRGBA(renderer, 301, 91, 1001, 788, 10, 245, 245, 245, 255);
-    roundedRectangleRGBA(renderer, 299, 91, 1000, 788, 10, 160, 160, 160, 240);
+    roundedBoxRGBA(renderer, 301, 91, 1001, 860, 10, 245, 245, 245, 255);
+    roundedRectangleRGBA(renderer, 299, 91, 1000, 860, 10, 160, 160, 160, 240);
 
-    roundedBoxRGBA(renderer, 1010, 91, 1526, 470, 10, 245, 245, 245, 255);
-    roundedRectangleRGBA(renderer, 1010, 91, 1526, 470, 10, 160, 160, 160, 240);
+    roundedBoxRGBA(renderer, 1010, 91, 1526, 520, 10, 245, 245, 245, 255);
+    roundedRectangleRGBA(renderer, 1010, 91, 1526, 520, 10, 160, 160, 160, 240);
 
-    roundedBoxRGBA(renderer, 1010, 480, 1526, 790, 10, 245, 245, 245, 255);
-    roundedRectangleRGBA(renderer, 1010, 480, 1526, 790, 10, 160, 160, 160, 240);
+    roundedBoxRGBA(renderer, 1010, 530, 1526, 860, 10, 245, 245, 245, 255);
+    roundedRectangleRGBA(renderer, 1010, 530, 1526, 860, 10, 160, 160, 160, 240);
 
-    filledRectangleRGBA(renderer, 61, 90, 250, 700, 245, 245, 245, 255);
-    rectangleRGBA(renderer, 59, 91, 310, 789, 160, 160, 160, 240);
+    filledRectangleRGBA(renderer, 61, 90, 250, 771, 245, 245, 245, 255);
+    rectangleRGBA(renderer, 59, 91, 310, 860, 160, 160, 160, 240);
 
     upRoundedButton(renderer, 180, 48, 103, 43, 17, 50, 50, 50, 255);
     upRoundedButton(renderer, 183, 51, 97, 37, 15, 220, 220, 220, 255);
@@ -86,6 +85,5 @@ int main(int argc, char* argv[]) {
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
     SDL_Quit();
-    return 0;
     return 0;
 }
